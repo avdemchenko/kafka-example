@@ -1,0 +1,4 @@
+app.kafka.orders-topic: orders
+
+server:
+  port: 8181
