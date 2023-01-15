@@ -16,4 +16,7 @@ public class OrderPublisher {
 
     private final KafkaTemplate<String, Order> orderKafkaTemplate;
 
+    public void publish(final Order order) {
+        orderKafkaTemplate.send(topic, order.id().toString(), order);
+    }
 }
